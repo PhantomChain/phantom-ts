@@ -2,7 +2,7 @@ import { JsonProperty } from 'json-typescript-mapper';
 import { PrivateKey } from '../index';
 
 export enum TransactionType {
-  SendArk = 0,
+  SendPhantom = 0,
   SecondSignature = 1,
   CreateDelegate = 2,
   Vote = 3,

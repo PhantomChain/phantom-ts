@@ -1,7 +1,7 @@
 {
-  "name": "ark-ts",
+  "name": "phantom-ts",
   "version": "0.3.14",
-  "description": "An ARK API wrapper, written in TypeScript to interact with ARK blockchain.",
+  "description": "An PHANTOM API wrapper, written in TypeScript to interact with PHANTOM blockchain.",
   "main": "index.js",
   "types": "index.d.ts",
   "scripts": {
@@ -14,20 +14,19 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/arkecosystem/ark-ts.git"
+    "url": "git+https://github.com/phantomchain/phantom-ts.git"
   },
   "bugs": {
-    "url": "https://github.com/ArkEcosystem/ark-ts/issues"
+    "url": "https://github.com/phantomchain/phantom-ts/issues"
   },
-  "homepage": "https://github.com/ArkEcosystem/ark-ts#readme",
+  "homepage": "https://github.com/phantomchain/phantom-ts#readme",
   "keywords": [
-    "ark",
+    "phantom",
     "api",
     "blockchain",
     "cryptocurrency",
     "typescript"
   ],
-  "author": "Lúcio Rubens <lucio@ark.io>",
   "license": "MIT",
   "dependencies": {
     "@types/bigi": "^1.4.0",
