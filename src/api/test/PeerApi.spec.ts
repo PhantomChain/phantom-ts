@@ -13,7 +13,7 @@ describe('PeerApi', () => {
   const network = Network.getDefault(NetworkType.Devnet);
   const http = new Http(network);
   const api = new PeerApi(http);
-  const address = 'DPTj92butfhy527V13bSXMj9SVYZGAVZ1R';
+  const address = 'Pgb6nDqqW3QypWNtpzuFgw2BfUnXoMCBP7';
 
   it('should be instance of PeerApi', () => {
     expect(api).to.be.instanceOf(PeerApi);
