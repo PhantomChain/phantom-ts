@@ -53,12 +53,12 @@ describe('TransactionApi', () => {
       return api.createTransaction({
         amount: 10,
         passphrase: key,
-        recipientId: 'DRKaLgq8jKYQEdN2EJ7aGEh8hMDvMzd3CW',
+        recipientId: 'PoBvx2ESMZr6Sz7P6SnaR4UXDHCAe2Tz4N',
         timestamp: 1,
       }).forEach((transaction) => {
         // tslint:disable
-        expect(transaction.signature).to.be.deep.eq('3045022100a3bc590b6b80b69070799ffb7fb08ecaff209f834c72a0f28c815d46eb3123b6022029c22350c72d4e42c4f39654629cd3b8d5ac377afdb338457a57bead65e83055');
-        expect(transaction.id).to.be.deep.eq('2b9debcedd717ccfe68e0786c7c3ee244ccec3181c85c709196315643350d61d');
+        expect(transaction.signature).to.be.deep.eq('3045022100a6ae1d8dada898fc12ba6ea3cd39751ffe58435ac07620a7c6731e68f6fd7ffb02205131534571a4809ea3607a9c65431491756c9984218fdb3ed17446d2403c8a5a');
+        expect(transaction.id).to.be.deep.eq('e56957065eb13dfcaceeddaccc2708ca72184f5f24c2e06092a0a7117fdf4faf');
         // tslint:enable
       });
     });
@@ -67,12 +67,12 @@ describe('TransactionApi', () => {
       return api.createTransaction({
         amount: 10,
         passphrase: 'mysecret',
-        recipientId: 'DRKaLgq8jKYQEdN2EJ7aGEh8hMDvMzd3CW',
+        recipientId: 'PoBvx2ESMZr6Sz7P6SnaR4UXDHCAe2Tz4N',
         timestamp: 1,
       }).forEach((transaction) => {
         // tslint:disable
-        expect(transaction.signature).to.be.deep.eq('3045022100a3bc590b6b80b69070799ffb7fb08ecaff209f834c72a0f28c815d46eb3123b6022029c22350c72d4e42c4f39654629cd3b8d5ac377afdb338457a57bead65e83055');
-        expect(transaction.id).to.be.deep.eq('2b9debcedd717ccfe68e0786c7c3ee244ccec3181c85c709196315643350d61d');
+        expect(transaction.signature).to.be.deep.eq('3045022100a6ae1d8dada898fc12ba6ea3cd39751ffe58435ac07620a7c6731e68f6fd7ffb02205131534571a4809ea3607a9c65431491756c9984218fdb3ed17446d2403c8a5a');
+        expect(transaction.id).to.be.deep.eq('e56957065eb13dfcaceeddaccc2708ca72184f5f24c2e06092a0a7117fdf4faf');
         // tslint:enable
       });
     });
@@ -81,13 +81,13 @@ describe('TransactionApi', () => {
       return api.createTransaction({
         amount: 10,
         passphrase: 'mysecret',
-        recipientId: 'DRKaLgq8jKYQEdN2EJ7aGEh8hMDvMzd3CW',
+        recipientId: 'PoBvx2ESMZr6Sz7P6SnaR4UXDHCAe2Tz4N',
         timestamp: 1,
         vendorField: 'hi from vekexasia',
       }).forEach((transaction) => {
         // tslint:disable
-        expect(transaction.signature).to.be.deep.eq('3044022035a591c9b8eb42732f1a87f6c535265fdc8015afd5105f1cf31012daeb3fffd50220705ac531bafc15d74ee263223c6346937c5fe31407c100cd732e8fd7780c8072');
-        expect(transaction.id).to.be.deep.eq('6bd6d69320efcf04d442b53034e07d3127905c353412d4a2c2215a115ca4795f');
+        expect(transaction.signature).to.be.deep.eq('3044022061253650c7f222c0d9f0f3b86a6f4a147a8af1bef17220fb74ff8aaea32c6cb402206444acb1a6f2bcdaad76aa17ec8f46613d8dc12d37649009d0c7952ba2c95abc');
+        expect(transaction.id).to.be.deep.eq('4dd8ffc63aa5a3e92ab9fb93c7497fffedaf566e6d6e5a99f1367382b2c93044');
         // tslint:enable
       });
     });
@@ -170,14 +170,14 @@ describe('TransactionApi', () => {
   });
 
   it('should return success from get', () => {
-    return api.get('a5e8ad49c9d8d074490f20cc4de960baa42c5db91f11513ddd7ccd853e5a49d9').forEach((response) => {
+    return api.get('0e2ebe16b816bc848838189be35a157d1153d96e63baa8269186a25b904d5107').forEach((response) => {
       expect(response).to.have.property('success', true);
     });
   });
 
   it('should return false on success field from getUnconfirmed', () => {
     return api.getUnconfirmed(
-      'a5e8ad49c9d8d074490f20cc4de960baa42c5db91f11513ddd7ccd853e5a49d9',
+      '0e2ebe16b816bc848838189be35a157d1153d96e63baa8269186a25b904d5107',
     ).forEach((response) => {
       expect(response).to.have.property('success', false);
     });
@@ -200,10 +200,10 @@ describe('TransactionApi', () => {
     const transaction = {
       amount: 100000000,
       fee: 10000000,
-      id: '5b9be5f9b1280d542e856e84758312780fe0061366592e579cbed8639511cac0',
-      recipientId: 'DPTj92butfhy527V13bSXMj9SVYZGAVZ1R',
-      senderPublicKey: '026c75159ccf36ffc639fdfcba7c6e798f90b2767b54b8a99f2eeec534c92a32e9',
-      signature: '304402203d971b4e50e27e7fec8fb6d42523b82a70a82af9b9488d8f4aa16cb7936162ea022077e072b21e78cf24b7a9b8b653042dcb218b226f1b18e9a7a8462bc49e48255b',
+      id: '0e2ebe16b816bc848838189be35a157d1153d96e63baa8269186a25b904d5107',
+      recipientId: 'PoBvx2ESMZr6Sz7P6SnaR4UXDHCAe2Tz4N',
+      senderPublicKey: '039061f5923dc839fdbb69b9ed56c516d5d313d54de1bd8ccca87188767d5641fb',
+      signature: '3045022100a6ae1d8dada898fc12ba6ea3cd39751ffe58435ac07620a7c6731e68f6fd7ffb02205131534571a4809ea3607a9c65431491756c9984218fdb3ed17446d2403c8a5a',
       timestamp: 9870360,
       type: 0,
       vendorField: 'Send transaction by phantom-tsc'

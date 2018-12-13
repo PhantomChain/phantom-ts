@@ -36,7 +36,7 @@ describe('BlockApi', () => {
   });
 
   it('should return sucess from get', () => {
-    return api.get({id: '8911180696223033455'}).forEach((response) => {
+    return api.get({id: '3267467082666380988'}).forEach((response) => {
       expect(response).to.have.property('success', true);
     });
   });

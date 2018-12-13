@@ -26,7 +26,7 @@ describe('PeerApi', () => {
   });
 
   it('should return success from get', () => {
-    return api.get('213.32.9.97', 4002).forEach((response) => {
+    return api.get('95.183.52.105', 4002).forEach((response) => {
       expect(response).to.have.property('success', true);
     });
   });
