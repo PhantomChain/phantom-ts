@@ -2,8 +2,8 @@
 
 > An PHANTOM API wrapper, written in TypeScript to interact with PHANTOM blockchain.
 
-[![npm](https://img.shields.io/npm/dt/phantom-ts.svg)]()
-[![npm](https://img.shields.io/npm/v/phantom-ts.svg)]()
+[![npm](https://img.shields.io/npm/dt/@phantomchain/phantom-ts.svg)]()
+[![npm](https://img.shields.io/npm/v/@phantomchain/phantom-ts.svg)]()
 [![license](https://img.shields.io/github/license/phantomchain/phantom-ts.svg)]()
 
 TSPHANTOM is a library client designed to facilitate how you interact with the PHANTOM blockchain.
@@ -19,13 +19,13 @@ TSPHANTOM is a library client designed to facilitate how you interact with the P
 TSPHANTOM is avaliable from `npm`.
 
 ```bash
-yarn add phantom-ts
+yarn add @phantomchain/phantom-ts
 ```
 
 or
 
 ```bash
-npm i phantom-ts --save
+npm i @phantomchain/phantom-ts --save
 ```
 
 ## Usage
@@ -37,7 +37,7 @@ For the best TypeScript experience, you should either use [Visual Studio Code](h
 > Get delegate list from Devnet network.
 
 ```js
-import { Client, Network, NetworkType } from 'phantom-ts';
+import { Client, Network, NetworkType } from '@phantomchain/phantom-ts';
 
 const devnet = Network.getDefault(NetworkType.Devnet);
 const client = new Client(devnet);
@@ -50,7 +50,7 @@ client.delegate.list().subscribe((list) => {
 > Get address from passphrase.
 
 ```js
-import { PrivateKey } from 'phantom-ts/core';
+import { PrivateKey } from '@phantomchain/phantom-ts/core';
 
 // if no specify a second param, default is mainnet
 const key = PrivateKey.fromSeed('my secret passphrase');
