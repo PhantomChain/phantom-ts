@@ -1,6 +1,6 @@
 {
   "name": "@phantomchain/phantom-ts",
-  "version": "0.3.14",
+  "version": "0.3.17",
   "description": "An PHANTOM API wrapper, written in TypeScript to interact with PHANTOM blockchain.",
   "main": "index.js",
   "types": "index.d.ts",
